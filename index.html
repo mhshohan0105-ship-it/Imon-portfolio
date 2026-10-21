@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md Imon Hossain | Analytical Chemist</title>
+  <meta name="description" content="Md Imon Hossain | Analytical Chemist (M.S. Chemistry, Western Illinois University). LC-MS/MS & UHPLC method development, isomer resolution, cannabinoid and forensic chemistry.">
+  <meta name="theme-color" content="#070d1a">
+  <meta property="og:title" content="Md Imon Hossain | Analytical Chemist">
+  <meta property="og:description" content="LC-MS/MS & UHPLC method development · Isomer resolution · Cannabinoid & forensic chemistry">
+  <meta property="og:image" content="assets/img/imon.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- Loader: bubbling flask -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <svg viewBox="0 0 80 100" class="flask">
+      <defs><clipPath id="flaskClip"><path d="M30 8h20v28l22 46a8 8 0 0 1-7 12H15a8 8 0 0 1-7-12l22-46z"/></clipPath></defs>
+      <g clip-path="url(#flaskClip)">
+        <rect class="liquid" x="0" y="60" width="80" height="40"/>
+        <circle class="bub b1" cx="30" cy="90" r="3"/><circle class="bub b2" cx="45" cy="92" r="2"/><circle class="bub b3" cx="54" cy="88" r="2.5"/>
+      </g>
+      <path class="glass" d="M30 8h20v28l22 46a8 8 0 0 1-7 12H15a8 8 0 0 1-7-12l22-46z"/>
+      <path class="glass" d="M26 8h28"/>
+    </svg>
+  </div>
+
+  <canvas id="molecules" aria-hidden="true"></canvas>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="logo" aria-label="Home">
+      <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+        <polygon class="logo-hex" points="20,2 36,11 36,29 20,38 4,29 4,11"/>
+        <circle class="logo-ring" cx="20" cy="20" r="9"/>
+      </svg>
+      <span>Imon<b>.</b></span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path class="sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg>
+      </button>
+      <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow reveal"><span class="pulse"></span> M.S. Chemistry · Western Illinois University</p>
+        <h1 class="reveal">Md Imon <span class="grad">Hossain</span></h1>
+        <p class="role reveal">
+          <span class="role-static">I am</span>
+          <span class="typed" id="typed">an Analytical Chemist</span><span class="caret">|</span>
+        </p>
+        <p class="lead reveal">
+          I build LC-MS/MS and UHPLC methods that separate molecules most labs can't tell apart:
+          positional and epimeric isomers in complex matrices, where getting it right matters for product
+          safety, regulatory compliance and forensic evidence.
+        </p>
+        <div class="cta reveal">
+          <a href="#research" class="btn primary">Explore my research</a>
+          <a href="assets/cv/Imon_Hossain_Resume.pdf" class="btn ghost" download>Download CV</a>
+        </div>
+        <ul class="formula-chips reveal" aria-label="Molecules I work with">
+          <li title="Cannabidiol (CBD)">C<sub>21</sub>H<sub>30</sub>O<sub>2</sub> <em>CBD</em></li>
+          <li title="Δ9-THC">Δ<sup>9</sup>-THC</li>
+          <li title="γ-Hydroxybutyric acid">C<sub>4</sub>H<sub>8</sub>O<sub>3</sub> <em>GHB</em></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="atom">
+          <div class="orbit o1"><span class="electron"></span></div>
+          <div class="orbit o2"><span class="electron"></span></div>
+          <div class="orbit o3"><span class="electron"></span></div>
+          <div class="nucleus">
+            <img src="assets/img/imon.jpg" alt="Md Imon Hossain at a research poster session" width="1280" height="854" fetchpriority="high">
+          </div>
+        </div>
+        <div class="badge-float bf1"><b>4.00</b><span>Graduate GPA</span></div>
+        <div class="badge-float bf2"><b>3+</b><span>Peer reviewed papers</span></div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <span class="tag">01 · About</span>
+        <h2>Precision is a <span class="grad">habit</span>, not a setting.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm an analytical chemist with graduate level research and <strong>2+ years of
+            laboratory experience</strong> across pharmaceutical, environmental and consumer product testing.
+            I work every day with HPLC, UHPLC, LC-MS, GC-MS and ICP-MS: developing, validating and troubleshooting
+            methods in cGMP and GLP regulated environments.
+          </p>
+          <p>
+            At Western Illinois University I designed three novel ISO/IEC 17025 compliant methods that quantify up to
+            <strong>23 structurally similar cannabinoids</strong> simultaneously, including eight isomer pairs, and found
+            mislabeling in <strong>10 of 15</strong> commercial products in a peer reviewed study.
+          </p>
+          <p>
+            I also teach. Every semester I guide 50+ students through chromatography and wet lab work, and I've
+            mentored summer researchers through presenting their own data.
+          </p>
+          <p class="auth"><span class="dot"></span> Authorized to work in the US · no sponsorship required</p>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><b data-count="23">0</b><span>analytes resolved in one run</span></div>
+          <div class="stat reveal"><b data-count="64">0</b><span>week ICH aligned stability study</span></div>
+          <div class="stat reveal"><b data-count="100" data-suffix="+">0</b><span>samples / day at Intertek</span></div>
+          <div class="stat reveal"><b data-count="50" data-suffix="+">0</b><span>students taught per semester</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <div class="section-head reveal">
+        <span class="tag">02 · Research</span>
+        <h2>Separating the <span class="grad">inseparable</span></h2>
+        <p class="sub">Isomers share a formula and often a mass. A good method tells them apart anyway. Hover over the peaks.</p>
+      </div>
+
+      <div class="chromato reveal" id="chromato">
+        <div class="chromato-head">
+          <span class="led"></span> UHPLC-DAD · 228 nm · C18 reversed phase
+          <button class="btn small ghost" id="replay" type="button">↻ Run again</button>
+        </div>
+        <div class="chromato-plot">
+          <svg viewBox="0 0 800 260" preserveAspectRatio="none" id="chromSvg" role="img" aria-label="Animated chromatogram showing baseline-separated cannabinoid isomer peaks">
+            <g class="grid"></g>
+            <path class="trace" id="trace" d=""/>
+          </svg>
+        </div>
+        <div class="chromato-axis"><span>0 min</span><span>Retention time →</span><span>12 min</span></div>
+        <div class="peak-tip" id="peakTip"></div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric reveal"><b>85.6 to 110%</b><span>Accuracy</span></div>
+        <div class="metric reveal"><b>&lt;5%</b><span>RSD precision</span></div>
+        <div class="metric reveal"><b>0.008%</b><span>w/w LOQ</span></div>
+        <div class="metric reveal"><b>95 to 110%</b><span>Recovery</span></div>
+      </div>
+
+      <div class="cards three">
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48"><polygon points="24,6 38,14 38,30 24,38 10,30 10,14"/><polygon points="24,14 31,18 31,26 24,30 17,26 17,18"/></svg>
+          </div>
+          <h3>Isomer resolving methods</h3>
+          <p>LC-MS/ESI-QTOF and UHPLC-DAD methods built from scratch for positional (Δ8/Δ9) and epimeric cannabinoid isomers, on an Agilent 1260 Infinity II.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48"><path d="M8 40h32M12 40V24m8 16V12m8 28V20m8 20V8"/></svg>
+          </div>
+          <h3>Stability &amp; degradation</h3>
+          <p>A 64 week ICH aligned study from −80 °C to +80 °C, mapping degradation pathways and heat driven conversion in finished consumer products.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="11"/><path d="M28 28l12 12"/><path d="M15 20h10M20 15v10"/></svg>
+          </div>
+          <h3>Forensic toxicology</h3>
+          <p>Confirming GHB against its isomers BHB and AHB with HRMS/MS, quantifying phenylbutazone in plasma, and identifying reserpine by isotopic distribution.</p>
+        </article>
+      </div>
+
+      <blockquote class="interest reveal">
+        "I'm drawn to the point where method robustness meets regulatory rigor: pushing detection limits low enough to
+        catch mislabeling that routine QC misses, and using computational approaches to guide method design before any bench work begins."
+      </blockquote>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <span class="tag">03 · Experience</span>
+        <h2>Reaction <span class="grad">pathway</span></h2>
+        <p class="sub">Each step built on the one before it.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="tl-item reveal">
+          <div class="tl-node"><span>RA</span></div>
+          <div class="tl-card">
+            <div class="tl-meta"><span>May 2025 to Present</span><span>Western Illinois University</span></div>
+            <h3>Graduate Research Assistant</h3>
+            <ul>
+              <li>Developed and validated 3 novel LC-MS/MS &amp; UHPLC-DAD methods (ISO/IEC 17025) for up to 23 analytes, including 8 positional/epimeric isomer pairs.</li>
+              <li>Quantified trace analytes (LOQ 0.008% w/w) across 23 commercial products: gummies, vaping oil, tinctures, bath balm and face cream.</li>
+              <li>Optimized extraction workflows, reaching 95 to 110% recovery with RSD as low as 1.0%.</li>
+              <li>Part of a 9 member, 3 university consortium (with a state regulatory agency) on NIJ funded method validation work.</li>
+              <li>Led a 7 member team on cross functional method development projects.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <div class="tl-node"><span>TA</span></div>
+          <div class="tl-card">
+            <div class="tl-meta"><span>Aug 2025 to Present</span><span>Western Illinois University</span></div>
+            <h3>Graduate Teaching Assistant</h3>
+            <ul>
+              <li>Hands on instruction in chromatography, wet lab operations and data interpretation across Organic, Analytical and Biochemistry labs for 50+ students per semester.</li>
+              <li>Supported PCR, plasmid purification, SDS-PAGE and affinity chromatography sessions.</li>
+              <li>Authored 1 new SOP and enforced 4 existing SOPs. Student accuracy and grades rose by 15%+ per semester.</li>
+              <li>Ran hands on STEM activities for elementary and middle school students.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <div class="tl-node"><span>QC</span></div>
+          <div class="tl-card">
+            <div class="tl-meta"><span>Nov 2023 to Dec 2023</span><span>Intertek, Dhaka</span></div>
+            <h3>Intern Analytical Chemist</h3>
+            <ul>
+              <li>ISO compliant QC testing with HPLC-MS, GC-MS, ICP-OES and ICP-MS: 100+ samples/day, 3 to 4 batches/day.</li>
+              <li>Tested for pH, formaldehyde, heavy metals, bisphenols, dyes, PFAS, phthalates, APEO and PAHs in garment, water and ETP samples.</li>
+              <li>Supported OOS/deviation investigations using 5S, PDCA and Kaizen.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="tl-item reveal">
+          <div class="tl-node"><span>GMP</span></div>
+          <div class="tl-card">
+            <div class="tl-meta"><span>Aug 2022</span><span>Silco Pharmaceutical Ltd.</span></div>
+            <h3>cGMP Facility Training</h3>
+            <ul><li>Pharmaceutical manufacturing and quality systems in a cGMP facility.</li></ul>
+          </div>
+        </li>
+      </ol>
+
+      <div class="edu">
+        <div class="edu-card reveal">
+          <span class="edu-flask" aria-hidden="true"></span>
+          <div>
+            <span class="tl-meta-inline">Jan 2025 to Dec 2026 (Est.)</span>
+            <h3>M.S. in Chemistry</h3>
+            <p>Western Illinois University, Illinois, USA</p>
+          </div>
+          <b class="gpa">4.00<small>/4.00</small></b>
+        </div>
+        <div class="edu-card reveal">
+          <span class="edu-flask" aria-hidden="true"></span>
+          <div>
+            <span class="tl-meta-inline">Mar 2018 to Jan 2024</span>
+            <h3>B.S. in Chemistry</h3>
+            <p>Pabna University of Science and Technology, Bangladesh</p>
+          </div>
+          <b class="gpa">3.04<small>/4.00</small></b>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS: periodic table -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <span class="tag">04 · Skills</span>
+        <h2>My periodic <span class="grad">table</span></h2>
+        <p class="sub">Filter by group, then hover over an element.</p>
+      </div>
+      <div class="ptable-filters reveal" id="ptFilters">
+        <button class="chip active" data-group="all">All</button>
+        <button class="chip g-chrom" data-group="chrom">Chromatography &amp; MS</button>
+        <button class="chip g-spec" data-group="spec">Spectroscopy</button>
+        <button class="chip g-lab" data-group="lab">Lab &amp; Bio</button>
+        <button class="chip g-qa" data-group="qa">Quality</button>
+        <button class="chip g-soft" data-group="soft">Software</button>
+      </div>
+      <div class="ptable" id="ptable"></div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+      <div class="section-head reveal">
+        <span class="tag">05 · Publications</span>
+        <h2>Peer reviewed <span class="grad">work</span></h2>
+      </div>
+      <div class="pubs">
+        <a class="pub reveal" href="https://doi.org/10.1080/10826076.2026.2636540" target="_blank" rel="noopener">
+          <span class="pub-year">2026</span>
+          <div>
+            <h3>Simultaneous Quantitative Analysis of Epimeric and 8/9 Positional Isomers of Synthetic THC Analogs and Natural Cannabinoids in Formulated Products by UHPLC-DAD with Optional ESI/TOFMS Confirmation</h3>
+            <p class="authors">Bommarito, A.; <b>Hossain, M. I.</b>; Joens, E.; Hora, J. S.; Song, L.; McConnell, M.</p>
+            <p class="journal">Journal of Liquid Chromatography &amp; Related Technologies · Vol. 49, Issues 5 to 8, pp. 158 to 171</p>
+          </div>
+          <span class="pub-arrow">↗</span>
+        </a>
+        <a class="pub reveal" href="https://doi.org/10.3390/molecules31101684" target="_blank" rel="noopener">
+          <span class="pub-year">2026</span>
+          <div>
+            <h3>High-Throughput LC-MS/MS Quantification of Eighteen Cannabinoids in Hemp Flowers with Baseline Separation of Structural Isomers</h3>
+            <p class="authors">Liu, N.; Schoener, M.; Rimi, N. J.; <b>Hossain, M. I.</b>; Regunathan, S.; Powers, R.; Song, L.</p>
+            <p class="journal">Molecules · 31, 1684</p>
+          </div>
+          <span class="pub-arrow">↗</span>
+        </a>
+        <a class="pub reveal" href="https://doi.org/10.1038/s41598-026-38726-x" target="_blank" rel="noopener">
+          <span class="pub-year">2026</span>
+          <div>
+            <h3>Efficacy of Phytochemicals Derived from Artocarpus heterophyllus (Jackfruit) as Inhibitors against NS2B/NS3 Protease of Dengue Virus: An In-Silico Investigation</h3>
+            <p class="authors">Uddin, M. A. R.; Paul, A. C.; Islam, M. S.; Nath, S. D.; Mim, I. J.; <b>Hossain, M. I.</b>; et al.</p>
+            <p class="journal">Scientific Reports · 16, 7543</p>
+          </div>
+          <span class="pub-arrow">↗</span>
+        </a>
+        <div class="pub reveal pending">
+          <span class="pub-year">Under review</span>
+          <div>
+            <h3>Chromatographic and Mass Spectrometric Strategies for Cannabis Analysis: Integrating Semi-Synthetic Cannabinoids, Matrix Effects, and Isomer Resolution</h3>
+            <p class="authors"><b>Hossain, M. I.</b> (sole author)</p>
+            <p class="journal">Review article · under peer review</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="reveal">
+          <h3 class="col-title">Conferences &amp; presentations</h3>
+          <ul class="list-dots">
+            <li><b>ACS Fall Meeting 2026</b>: Quantification of Δ8-THC-O-acetate in vaping oil by LC-UV and ESI-TOF mass spectrometry.</li>
+            <li><b>Illinois State Academy of Science, SIUE (Apr 2025)</b>: Cannabidiol in hemp infused face cream by UHPLC-UV.</li>
+            <li><b>National Research Symposium Day, WIU (Apr 2025)</b>: Cannabidiol in hemp infused bath balm by UHPLC-UV.</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="col-title">Awards &amp; certifications</h3>
+          <ul class="awards">
+            <li><span class="medal">★</span><div><b>Special Recognition in Research Award</b><small>WIU Department of Chemistry · Apr 2026</small></div></li>
+            <li><span class="medal">★</span><div><b>Graduate Student Research &amp; Professional Development Fund</b><small>Western Illinois University · Mar 2026</small></div></li>
+            <li><span class="medal alt">✓</span><div><b>Foundations of GMP (eLearning)</b><small>USP · Aug 2026</small></div></li>
+            <li><span class="medal alt">✓</span><div><b>cGMP Facility Training</b><small>Silco Pharmaceutical Ltd. · Aug 2022</small></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact-box reveal">
+        <span class="tag">06 · Contact</span>
+        <h2>Let's run the <span class="grad">next experiment</span> together.</h2>
+        <p>Open to roles in analytical R&amp;D, pharmaceutical QC, forensic chemistry, and teaching.</p>
+        <div class="contact-links">
+          <a class="btn primary" href="mailto:i-hossain3@wiu.edu">i-hossain3@wiu.edu</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/mdimonhossain" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="cv-links">
+          <a href="assets/cv/Imon_Hossain_Resume.pdf" download>↓ Download Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Md Imon Hossain · Analytical Chemist</p>
+    <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
